@@ -17,11 +17,12 @@ class PokemonList extends Component {
         } else {
             return data.pokemons.map(pokemon => {
                 return (<li key={pokemon.id} onClick={(e) => { this.setState({ selected: pokemon.id }) }}>
-                    <div>
-                        <img src={pokemon.image} alt={pokemon.name} />
-                        <h3><strong>Name: </strong>{pokemon.name}</h3>
-                        <p><strong>Number: </strong>{pokemon.number}</p>
-                    </div>s
+                    <div className="list">
+                        <div className="image"><img className="item-image" src={pokemon.image} alt={pokemon.name} width="100" /></div>
+                        <div className="content"><h3><strong>Name: </strong>{pokemon.name}</h3>
+                            <p><strong>Number: </strong>{pokemon.number}</p>
+                        </div>
+                    </div>
                 </li>)
             })
         }
