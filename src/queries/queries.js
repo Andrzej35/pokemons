@@ -6,12 +6,13 @@ export const getPokemonsQuery = gql`
         image
         number
         name
+        id
     }
 }
 `
 
 export const getPokemonQuery = gql`
-    query($id: ID, $name: String) {
+    query($id: String, $name: String) {
         pokemon(id: $id, name: $name) {
             image
             number
