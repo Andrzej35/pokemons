@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { graphql } from 'react-apollo'
 import { getPokemonsQuery } from '../queries/queries'
 import { Link } from 'react-router-dom'
 
-class PokemonList extends Component {
+const PokemonList = (props) => {
 
-    displayPokemons() {
-        const { data } = this.props
-        if (data.loading) {
+    const displayPokemons = () => {
+        const { pokemons, loading } = props.data
+        if (loading) {
             return (<div>loading pokemons ...</div>)
         } else {
-            // console.log(data.pokemons.map(pokemon => pokemon))
-            return data.pokemons.map(pokemon => {
-                return (<li key={pokemon.id} onClick={(e) => { this.setState({ selected: pokemon.id, name: pokemon.name }) }}>
+            return pokemons.map(pokemon => {
+                return (<li key={pokemon.id} >
                     <Link to={`/pokemon/${pokemon.id}`}>
                         <div className="list">
                             <div className="image"><img className="item-image" src={pokemon.image} alt={pokemon.name} /></div>
@@ -25,17 +24,15 @@ class PokemonList extends Component {
             })
         }
     }
-    render() {
-        console.log(this.state)
-        return (
-            <div>
-                <h1>Pokemons List:</h1>
-                <ul className="pokemon-list">
-                    {this.displayPokemons()}
-                </ul>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h1>Pokemon's List:</h1>
+            <ul className="pokemon-list">
+                {displayPokemons()}
+            </ul>
+        </div>
+    )
+
 }
 
 export default graphql(getPokemonsQuery)(PokemonList)

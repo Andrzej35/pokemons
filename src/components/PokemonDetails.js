@@ -4,17 +4,16 @@ import { Link } from 'react-router-dom'
 import { getPokemonQuery } from '../queries/queries'
 
 const PokemonDetails = (props) => {
-    console.log(props)
     const { pokemon } = props.data
     if (!pokemon) {
-        return <div>pokemon is loading...</div>
+        return <div>Loading pokemon's information...</div>
     }
     return (
 
         <div id="pokemon-details">
 
             <Link to={`/`}>Go back to Pokemon's list</Link>
-            <h1>Pokemon's details</h1>
+            <h1>Pokemon's information</h1>
             <div className="pokemon-details">
                 <img src={pokemon.image} alt={pokemon.name} />
                 <h3>{pokemon.name}</h3>
