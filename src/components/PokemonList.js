@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 
@@ -35,6 +36,11 @@ const PokemonList = (props) => {
         </div>
     )
 
+}
+
+PokemonList.propTypes = {
+    pokemons: PropTypes.array,
+    loading: PropTypes.bool
 }
 
 export default graphql(getPokemonsQuery)(PokemonList)

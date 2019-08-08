@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 import { getPokemonQuery } from '../queries/queries'
@@ -25,6 +26,10 @@ const PokemonDetails = (props) => {
 
         </div>
     )
+}
+
+PokemonDetails.propTypes = {
+    pokemon: PropTypes.object
 }
 
 export default graphql(getPokemonQuery, {
