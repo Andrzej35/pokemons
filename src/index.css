@@ -29,6 +29,7 @@ body {
   /*margin: 3px 5px;*/
   transform: scale(1.01);
   transition: 0.3s;
+  background: #ccc
 }
 
 .pokemon-list .image {
@@ -38,4 +39,17 @@ body {
 
 .pokemon-list .content {
   justify-content: center;
+}
+
+.pokemon-details {
+  background: #fff;
+  border: 1px solid #090909;
+  padding: 20px;
+}
+
+.error-404 {
+  background: #fff;
+  border: 1px solid #090909;
+  padding: 20px;
+  text-align: center;
 }
