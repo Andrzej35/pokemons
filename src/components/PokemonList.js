@@ -1,7 +1,9 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
-import { getPokemonsQuery } from '../queries/queries'
 import { Link } from 'react-router-dom'
+
+import { getPokemonsQuery } from '../queries/queries'
+
 
 const PokemonList = (props) => {
 
