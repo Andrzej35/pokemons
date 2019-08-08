@@ -29,9 +29,10 @@ const mocks = [
 describe('', () => {
     it('renders without error', () => {
 
-        <MockedProvider mocks={mocks} addTypename={false}>
+        create(<MockedProvider mocks={mocks} addTypename={false}>
             <Pokemon id="UG9rZW1vbjowMDE=" />
-        </MockedProvider>
+        </MockedProvider>)
+
 
     })
 
@@ -45,4 +46,5 @@ describe('', () => {
         expect(tree).toMatchSnapshot()
 
     })
+
 })
