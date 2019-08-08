@@ -1,6 +1,6 @@
 body {
   font: bold 16px 'Blinker', sans-serif;
-  background: #ccc;
+  background: #eee;
 }
 
 .pokemon-list {
@@ -26,15 +26,20 @@ body {
   transition: 0.3s;
 }
 .pokemon-list .list:hover {
-  /*margin: 3px 5px;*/
   transform: scale(1.01);
   transition: 0.3s;
-  background: #ccc
+  background: #eee
 }
 
-.pokemon-list .image {
+.pokemon-list .list .image {
   justify-content: flex-start;
   margin: 0 20px;
+  width: 100px;
+  height: auto;
+}
+
+.pokemon-list .list .image img {
+  width: 100%;
 }
 
 .pokemon-list .content {
