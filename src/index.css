@@ -20,7 +20,7 @@ body {
   padding: 10px;
   margin: 5px 10px;
   border-radius: 4px;
-  border: 1px solid rgb(31, 30, 30);
+  border: 1px solid rgb(30, 30, 30);
   box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
   cursor: pointer;
   transition: 0.3s;
@@ -45,6 +45,13 @@ body {
 .pokemon-list .content {
   justify-content: center;
 }
+
+.pokemon-list a {
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+}
+
+
 
 .pokemon-details {
   background: #fff;
