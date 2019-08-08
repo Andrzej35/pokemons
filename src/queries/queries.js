@@ -1,4 +1,6 @@
+import React from 'react'
 import { gql } from 'apollo-boost'
+import { Query } from 'react-apollo'
 
 export const getPokemonsQuery = gql`
 {
@@ -23,3 +25,19 @@ export const getPokemonQuery = gql`
         }
     }
 `
+
+export const Pokemon = ({ id }) => (
+
+    <Query query={getPokemonQuery} variables={{ id }}>
+        {({ loading, error, data }) => {
+            if (loading) return 'loading pokemon\'s information...';
+            if (error) return `Error!`;
+
+            return (
+                <p>
+                    {data.pokemon.name}
+                </p>
+            );
+        }}
+    </Query>
+)

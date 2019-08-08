@@ -19,11 +19,13 @@ const PokemonDetails = (props) => {
             <h1>Pokemon's information</h1>
             <div className="pokemon-details">
                 <img src={pokemon.image} alt={pokemon.name} />
-                <h3>Name: {pokemon.name}</h3>
-                <p>Number: {pokemon.number}</p>
-                <p>Types: {displayContent(pokemon.types)}</p>
-                <p>Resistant: {displayContent(pokemon.resistant)}</p>
-                <p>Weaknesses: {displayContent(pokemon.weaknesses)}</p>
+                <div className="content-details">
+                    <h3>Name: {pokemon.name}</h3>
+                    <p>Number: {pokemon.number}</p>
+                    <p>Types: {displayContent(pokemon.types)}</p>
+                    <p>Resistant: {displayContent(pokemon.resistant)}</p>
+                    <p>Weaknesses: {displayContent(pokemon.weaknesses)}</p>
+                </div>
             </div>
 
         </div>

@@ -13,7 +13,7 @@ body {
   margin: 0;
 }
 
-.pokemon-list .list {
+.pokemon-list .list, .pokemon-details {
   display: flex;
   flex-direction: row;
   background: #fff;
@@ -57,9 +57,23 @@ body {
   padding: 20px;
 }
 
+.content-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0 0 50px;
+}
+
 .error-404 {
   background: #fff;
   border: 1px solid #090909;
   padding: 20px;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .pokemon-details img {
+    width: 40%;
+    height: 40%;
+  }
 }
