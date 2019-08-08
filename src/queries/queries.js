@@ -30,14 +30,14 @@ export const Pokemon = ({ id }) => (
 
     <Query query={getPokemonQuery} variables={{ id }}>
         {({ loading, error, data }) => {
-            if (loading) return 'loading pokemon\'s information...';
-            if (error) return `Error!`;
+            if (loading) return 'loading pokemon\'s information...'
+            if (error) return `Error!`
 
             return (
                 <p>
                     {data.pokemon.name}
                 </p>
-            );
+            )
         }}
     </Query>
 )

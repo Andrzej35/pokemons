@@ -26,7 +26,7 @@ const App = () => {
         </Router>
       </div>
     </ApolloProvider>
-  );
+  )
 }
 
 export default App

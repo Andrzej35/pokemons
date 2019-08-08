@@ -40,7 +40,7 @@ describe('[<PokemonList />]', () => {
             { name: "bulbasaur" },
             { name: "ivysaur" },
             { name: "venusaur" }
-        ];
+        ]
 
         wrapper.setState({
             fetched,
@@ -48,5 +48,5 @@ describe('[<PokemonList />]', () => {
         })
 
         expect(toJson(wrapper)).toMatchSnapshot()
-    });
+    })
 })
