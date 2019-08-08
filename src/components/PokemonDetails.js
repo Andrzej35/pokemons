@@ -4,10 +4,12 @@ import { graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 import { getPokemonQuery } from '../queries/queries'
 
+const displayContent = (data) => data.map(x => x).join(', ')
+
 const PokemonDetails = (props) => {
     const { pokemon } = props.data
     if (!pokemon) {
-        return <div>Loading pokemon's information...</div>
+        return <div>loading pokemon's information...</div>
     }
     return (
 
@@ -17,11 +19,11 @@ const PokemonDetails = (props) => {
             <h1>Pokemon's information</h1>
             <div className="pokemon-details">
                 <img src={pokemon.image} alt={pokemon.name} />
-                <h3>{pokemon.name}</h3>
-                <p>{pokemon.number}</p>
-                <p>{pokemon.types}</p>
-                <p>{pokemon.resistant}</p>
-                <p>{pokemon.weaknesses}</p>
+                <h3>Name: {pokemon.name}</h3>
+                <p>Number: {pokemon.number}</p>
+                <p>Types: {displayContent(pokemon.types)}</p>
+                <p>Resistant: {displayContent(pokemon.resistant)}</p>
+                <p>Weaknesses: {displayContent(pokemon.weaknesses)}</p>
             </div>
 
         </div>
